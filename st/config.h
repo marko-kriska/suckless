@@ -16,7 +16,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/usr/bin/fish";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = "scroll";
@@ -45,7 +45,7 @@ int allowaltscreen = 1;
 
 /* allow certain non-interactive (insecure) window operations such as:
    setting the clipboard text */
-int allowwindowops = 0;
+int allowwindowops = 1;
 
 /*
  * draw latency range in ms - from new content/keypress/etc until drawing.

@@ -61,9 +61,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray4, "-sb", col_gray1, "-sf", col_cyan, NULL };
-static const char *termcmd[]    = { "st", "-e", "fish",  NULL };
-static const char *mixer[]      = { "st", "--class", "pulsemixer,pulsemixer", "-e", "pulsemixer", NULL };
-static const char *rss[]        = { "st", "--class", "newsboat,newsboat", "-e", "newsboat", NULL };
+static const char *termcmd[]    = { "alacritty", NULL };
+static const char *mixer[]      = { "alacritty", "--class", "pulsemixer,pulsemixer", "-e", "pulsemixer", NULL };
+static const char *rss[]        = { "alacritty", "--class", "newsboat,newsboat", "-e", "newsboat", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 static const char *screenshot[] = { "scrot", "-s", "-e", "mv $f ~/Downloads", NULL };
 static const char *passcmd[]    = { "rofi-pass", NULL };
