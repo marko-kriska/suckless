@@ -68,6 +68,7 @@ static const char *rss[]        = { "alacritty", "--class", "newsboat,newsboat",
 static const char *browsercmd[] = { "firefox", NULL };
 static const char *screenshot[] = { "scrot", "-s", "-e", "mv $f ~/Downloads", NULL };
 static const char *radio[]      = { "dm-radio", NULL };
+static const char *pass[]       = { "passmenu", NULL };
 static const char *mutecmd[]    = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *volupcmd[]   = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
@@ -87,7 +88,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F1,     spawn,          {.v = screen_1 } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = screen_2 } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slock } },
-	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = radio } },
+	{ MODKEY|ControlMask,           XK_r,      spawn,          {.v = radio } },
+	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = pass} },
 	{ MODKEY|ControlMask,           XK_m,      spawn,          {.v = mixer } },
 	{ MODKEY|ControlMask,           XK_n,      spawn,          {.v = rss } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
