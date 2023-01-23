@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono:size=10" };
-static const char dmenufont[]       = "JetBrainsMono:size=10";
+static const char *fonts[]          = { "Fira Code:style=Retina:size=10" };
+static const char dmenufont[]       = "Fira Code:style=Retina:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -68,6 +68,7 @@ static const char *rss[]        = { "alacritty", "--class", "newsboat,newsboat",
 static const char *browsercmd[] = { "firefox", NULL };
 static const char *screenshot[] = { "scrot", "-s", "-e", "mv $f ~/Downloads", NULL };
 static const char *radio[]      = { "dm-radio", NULL };
+static const char *pass[]       = { "passmenu", NULL };
 static const char *mutecmd[]    = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *volupcmd[]   = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
@@ -87,7 +88,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F1,     spawn,          {.v = screen_1 } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = screen_2 } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slock } },
-	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = radio } },
+	{ MODKEY|ControlMask,           XK_r,      spawn,          {.v = radio } },
+	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = pass} },
 	{ MODKEY|ControlMask,           XK_m,      spawn,          {.v = mixer } },
 	{ MODKEY|ControlMask,           XK_n,      spawn,          {.v = rss } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
