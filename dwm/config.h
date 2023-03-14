@@ -60,15 +60,15 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray4, "-sb", col_gray1, "-sf", col_cyan, NULL };
+/* static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray4, "-sb", col_gray1, "-sf", col_cyan, NULL };*/
 static const char *roficmd[]    = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]    = { "alacritty", NULL };
 static const char *mixer[]      = { "alacritty", "--class", "pulsemixer,pulsemixer", "-e", "pulsemixer", NULL };
 static const char *rss[]        = { "alacritty", "--class", "newsboat,newsboat", "-e", "newsboat", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 static const char *screenshot[] = { "scrot", "-s", "-e", "mv $f ~/Downloads", NULL };
-static const char *radio[]      = { "dm-radio", NULL };
-static const char *pass[]       = { "passmenu", NULL };
+static const char *radio[]      = { "rofi-radio", NULL };
+static const char *pass[]       = { "rofi-pass", NULL };
 static const char *mutecmd[]    = { "amixer", "-q", "set", "Master", "toggle", NULL };
 static const char *volupcmd[]   = { "amixer", "-q", "set", "Master", "5%+", NULL };
 static const char *voldowncmd[] = { "amixer", "-q", "set", "Master", "5%-", NULL };
@@ -81,8 +81,8 @@ static const char *screen_2[]   = { "screen_2.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = roficmd } },
+	/*{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },*/
+	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_Print,  spawn,          {.v = screenshot } },
