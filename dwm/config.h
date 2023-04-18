@@ -4,8 +4,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono:size=10:antialias=true:hinting=true" };
-static const char dmenufont[]       = "JetBrains Mono:size=10:antialias=true:hinting=true";
+static const char *fonts[]          = { "IBM Plex Mono:size=10:antialias=true:hinting=true" };
+static const char dmenufont[]       = "IBM Plex Mono:size=10:antialias=true:hinting=true";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -62,9 +62,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray4, "-sb", col_gray1, "-sf", col_cyan, NULL };
 static const char *roficmd[]    = { "rofi", "-show", "drun", NULL };
-static const char *termcmd[]    = { "alacritty", NULL };
-static const char *mixer[]      = { "alacritty", "--class", "pulsemixer,pulsemixer", "-e", "pulsemixer", NULL };
-static const char *rss[]        = { "alacritty", "--class", "newsboat,newsboat", "-e", "newsboat", NULL };
+static const char *termcmd[]    = { "kitty", NULL };
+static const char *mixer[]      = { "kitty", "--class", "pulsemixer,pulsemixer", "-e", "pulsemixer", NULL };
+static const char *rss[]        = { "kitty", "--class", "newsboat,newsboat", "-e", "newsboat", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 static const char *screenshot[] = { "scrot", "-s", "-e", "mv $f ~/Downloads", NULL };
 static const char *radio[]      = { "dm-radio", NULL };
