@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Terminus:pixelsize=14";
+static char *font = "Terminess Nerd Font:pixelsize=14";
 static int borderpx = 20;
 
 /*
