@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "IBM Plex Mono:pixelsize=14";
+static char *font = "IntelOne Mono:pixelsize=14";
 static int borderpx = 20;
 
 /*
